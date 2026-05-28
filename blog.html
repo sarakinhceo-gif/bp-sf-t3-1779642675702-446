@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블로그 — 화곡 셔츠룸 · 마포 서버 웜업</title>
+    <meta name="description" content="화곡 셔츠룸, 마포 서버 웜업 최고의 선택. 010-6279-0862. 과감한 스타일과 완벽한 웜업으로 차원이 다른 경험. 규칙은 깨라고 있는 것.">
+    <meta name="keywords" content="화곡 셔츠룸, 마포 셔츠룸, 서버 웜업, 화곡 셔츠룸 010-6279-0862, 마포 서버 웜업, 셔츠룸 추천, 화곡 셔츠룸 후기, 블로그">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sf-t3-1779642675702-446.pages.dev">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="블로그 — 화곡 셔츠룸 · 마포 서버 웜업">
+    <meta property="og:description" content="화곡 셔츠룸, 마포 서버 웜업 최고의 선택. 규칙은 깨라고 있는 것. 과감한 스타일과 완벽한 웜업으로 차원이 다른 경험.">
+    <meta property="og:url" content="https://sf-t3-1779642675702-446.pages.dev">
+    <meta property="og:image" content="https://sf-t3-1779642675702-446.pages.dev/og-image.jpg">
+    <meta property="og:locale" content="ko_KR">
+    <style>
+        /* Brutalist Avant-Garde — KR Neon Void */
+        :root {
+            --bg: #0a0a0a;
+            --text: #e0e0e0;
+            --accent: #ff00ff;
+            --accent2: #00ffff;
+            --accent3: #ffff00;
+            --border: 3px solid var(--accent);
+            --shadow: 6px 6px 0 var(--accent);
+            --font-mono: 'Courier New', Courier, monospace;
+            --font-sans: 'Inter', 'Noto Sans KR', system-ui, sans-serif;
+            --spacing: 1.2rem;
+            --max-width: 1200px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        a {
+            color: var(--accent2);
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        a:hover, a:focus {
+            border-bottom-color: var(--accent2);
+            color: var(--accent);
+        }
+        /* 헤더 */
+        .header {
+            border-bottom: var(--border);
+            padding: 1.5rem var(--spacing);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .header .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-shadow: 4px 4px 0 var(--accent2);
+            line-height: 1;
+        }
+        .header .logo span {
+            color: var(--accent3);
+            display: block;
+            font-size: 0.8rem;
+            text-shadow: none;
+            letter-spacing: 0.3em;
+        }
+        /* 내비게이션 */
+        .nav {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav a {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.3rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        .nav a.active {
+            border-bottom-color: var(--accent3);
+            color: var(--accent3);
+        }
+        /* 햄버거 메뉴 (데스크톱에서는 숨김) */
+        .hamburger-menu {
+            display: none;
+            background: none;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            font-size: 1.8rem;
+            padding: 0.2rem 0.6rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .hamburger-menu:hover {
+            background: var(--accent);
+            color: var(--bg);
+        }
+        /* 메인 */
+        .main {
+            flex: 1;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 2rem var(--spacing);
+            width: 100%;
+        }
+        /* 블로그 포스트 */
+        .blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .blog-post h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+            color: var(--accent);
+            border-left: 6px solid var(--accent3);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            word-break: keep-all;
+        }
+        .blog-post .meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--accent2);
+            border-bottom: 2px solid #333;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .blog-post .meta span {
+            letter-spacing: 0.05em;
+        }
+        .blog-post h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent2);
+            border-bottom: 3px dotted var(--accent);
+            display: inline-block;
+        }
+        .blog-post p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        .blog-post blockquote {
+            border-left: 5px solid var(--accent3);
+            background: #111;
+            padding: 1.2rem 1.5rem;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--accent3);
+            position: relative;
+        }
+        .blog-post blockquote::before {
+            content: "🔥";
+            position: absolute;
+            top: -0.8rem;
+            left: -0.8rem;
+            font-size: 1.5rem;
+        }
+        .blog-post .highlight {
+            background: var(--accent);
+            color: var(--bg);
+            padding: 0.2rem 0.5rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+        .blog-post ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            list-style: square;
+        }
+        .blog-post ul li {
+            margin-bottom: 0.7rem;
+            border-left: 2px solid var(--accent2);
+            padding-left: 0.8rem;
+        }
+        .blog-post .cta-box {
+            background: #111;
+            border: 3px solid var(--accent);
+            padding: 2rem;
+            margin: 2.5rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .blog-post .cta-box p {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+        .blog-post .cta-box .phone {
+            font-size: 2.2rem;
+            color: var(--accent3);
+            font-weight: 900;
+            letter-spacing: 0.1em;
+        }
+        /* 푸터 */
+        .footer {
+            border-top: var(--border);
+            padding: 1.5rem var(--spacing);
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+        .footer a {
+            color: var(--accent2);
+        }
+        /* 반응형 768 */
+        @media (max-width: 768px) {
+            :root {
+                --spacing: 0.8rem;
+            }
+            .header .logo {
+                font-size: 1.5rem;
+            }
+            .header .logo span {
+                font-size: 0.6rem;
+            }
+            .nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #0a0a0a;
+                border-top: 2px solid var(--accent);
+                padding: 1rem 0;
+            }
+            .nav.open {
+                display: flex;
+            }
+            .nav a {
+                padding: 0.5rem 1rem;
+                border-bottom: 1px solid #222;
+            }
+            .hamburger-menu {
+                display: block;
+            }
+            .blog-post h1 {
+                font-size: 1.8rem;
+                padding-left: 0.8rem;
+            }
+            .blog-post h2 {
+                font-size: 1.3rem;
+            }
+            .blog-post .cta-box .phone {
+                font-size: 1.5rem;
+            }
+            .blog-post blockquote {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            화곡 셔츠룸
+            <span>MA·PO SERVER WARM-UP</span>
+        </div>
+        <button class="hamburger-menu" aria-label="메뉴 열기" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+        <nav class="nav">
+            <a href="/">홈</a>
+            <a href="/service.html">서비스</a>
+            <a href="/gallery.html">갤러리</a>
+            <a href="/blog.html" class="active">블로그</a>
+            <a href="/contact.html">연락처</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <article class="blog-post">
+            <h1>셔츠룸의 진정한 의미: 규칙을 깨는 방법</h1>
+            <div class="meta">
+                <span>📅 2025.04.01</span>
+                <span>✍️ 마포 서버 웜업 에디터</span>
+                <span>🔥 조회 2,847</span>
+            </div>
+
+            <p><span class="highlight">화곡 셔츠룸은 단순한 장소가 아니다.</span> 그것은 하나의 선언이다. <strong>“나는 규칙을 따르지 않는다.”</strong> 라고 말하는 행위 그 자체다. 마포에서 서버 웜업을 찾는다면, 너는 이미 평범한 길을 걷기 싫다는 뜻이다. 좋아. 여기 정답이 있다.</p>
+
+            <blockquote>
+                “셔츠룸에서 가장 중요한 건 셔츠가 아니다. 그것을 입는 태도다.”
+            </blockquote>
+
+            <p>우리는 매일 수많은 ‘해야 하는 것’에 둘러싸여 산다. 넥타이를 매고, 인사를 하고, 예의를 갖춰야 한다. 하지만 진짜 웜업은 그 모든 것을 벗어던질 때 시작된다. <strong>화곡 셔츠룸 010-6279-0862</strong> — 이 번호는 그런 너를 기다리고 있다.</p>
+
+            <h2>왜 마포여야 하는가?</h2>
+            <p>마포는 서울의 심장부이지만, 아직 길들여지지 않은 에너지가 흐른다. 여기서 우리는 셔츠 위에 정장을, 정장 위에 자유를 입는다. 서버 웜업이라는 이름 아래, 우리는 모든 것을 새롭게 정의한다. <strong>너의 웜업은 누가 정해줬나? 네가 직접 정해라.</strong></p>
+
+            <ul>
+                <li>기성품이 아닌 너만의 스타일</li>
+                <li>남들이 하는 대로가 아닌 네 직감이 이끄는 대로</li>
+                <li>화곡 셔츠룸은 네가 그 선택을 할 수 있는 유일한 장소</li>
+            </ul>
+
+            <p>이쯤에서 솔직해지자. 우리는 모두 무언가를 갈망한다. 단순한 음료나 안주가 아니라, <span class="highlight">“오늘 밤은 다를 거야”</span> 라는 확신. 셔츠 한 장으로 그 확신을 만들 수 있다면? 그게 바로 <strong>서버 웜업의 힘</
+</body>
+</html>
