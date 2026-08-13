@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · sf-t3-1779642675702-446</title>
+  <meta name="description" content="sf-t3-1779642675702-446에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-446.maphoshirts.today/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* BRUTALIST AVANT-GARDE SYSTEM — KR-NEON-VOID */
+ :root {
+ --bg: #0b0b0b;
+ --fg: #e0e0e0;
+ --accent: #ff2a6d;
+ --accent2: #05d9e8;
+ --accent3: #f5e942;
+ --font-sans: 'Space Grotesk', 'Noto Sans KR', system-ui, sans-serif;
+ --font-mono: 'JetBrains Mono', 'Nanum Gothic Coding', monospace;
+ --border-w: 3px;
+ --shadow: 6px 6px 0 rgba(255,42,109,0.3);
+ }
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body {
+ font-family: var(--font-sans);
+ background: var(--bg);
+ color: var(--fg);
+ line-height: 1.6;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ }
+ a { color: var(--accent2); text-decoration: none; border-bottom: 2px solid transparent; transition: 0.15s; }
+ a:hover { border-bottom-color: var(--accent2); color: #fff; }
+ img { max-width: 100%; height: auto; display: block; }
+ ::selection { background: var(--accent); color: #000; }
+
+ /* LAYOUT */
+ .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+ /* HEADER */
+ .header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 1.5rem 2rem;
+ border-bottom: var(--border-w) solid var(--accent);
+ background: rgba(11,11,11,0.95);
+ backdrop-filter: blur(6px);
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+ .logo {
+ font-size: 1.8rem;
+ font-weight: 900;
+ letter-spacing: -0.03em;
+ text-transform: uppercase;
+ color: var(--accent);
+ text-shadow: 0 0 12px rgba(255,42,109,0.4);
+ }
+ .logo span { color: var(--accent2); }
+ .nav { display: flex; gap: 2rem; align-items: center; }
+ .nav a {
+ font-size: 0.95rem;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 0.08em;
+ color: var(--fg);
+ border: none;
+ padding: 0.25rem 0;
+ }
+ .nav a:hover { color: var(--accent); }
+ .nav a.active { color: var(--accent); border-bottom: 3px solid var(--accent); }
+
+ /* HAMBURGER */
+ .hamburger-menu { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+ .hamburger-menu span { display: block; width: 28px; height: 3px; background: var(--fg); border-radius: 0; transition: 0.2s; }
+
+ @media (max-width: 768px) {
+ .responsive-768 .nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); border-bottom: var(--border-w) solid var(--accent); padding: 1rem 2rem; gap: 1rem; }
+ .responsive-768 .nav.open { display: flex; }
+ .responsive-768 .hamburger-menu { display: flex; }
+ .header { padding: 1rem 1.5rem; }
+ }
+
+ /* HERO (info version) */
+ .hero-info {
+ padding: 5rem 0 3rem;
+ border-bottom: 2px dashed var(--accent3);
+ position: relative;
+ }
+ .hero-info::before {
+ content: '◆ INFO';
+ position: absolute;
+ top: 1.5rem;
+ right: 2rem;
+ font-family: var(--font-mono);
+ font-size: 0.8rem;
+ color: var(--accent3);
+ letter-spacing: 0.3em;
+ opacity: 0.5;
+ }
+ .hero-info h1 {
+ font-size: 3.2rem;
+ font-weight: 900;
+ line-height: 1.1;
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ margin-bottom: 1rem;
+ }
+ .hero-info h1 span { color: var(--accent); }
+ .hero-info .sub {
+ font-size: 1.3rem;
+ color: var(--accent2);
+ font-weight: 300;
+ max-width: 700px;
+ }
+ .hero-info .tagline {
+ margin-top: 2rem;
+ display: inline-block;
+ background: var(--accent);
+ color: #000;
+ padding: 0.5rem 1.5rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ clip-path: polygon(0 0, 100% 0, 97% 100%, 3% 100%);
+ }
+
+ /* CARD */
+ .card-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 1.5rem;
+ padding: 3rem 0;
+ }
+ .card {
+ background: #111;
+ border: var(--border-w) solid #222;
+ padding: 2rem 1.5rem;
+ box-shadow: var(--shadow);
+ transition: 0.2s;
+ }
+ .card:hover { border-color: var(--accent); transform: translate(-3px, -3px); box-shadow: 8px 8px 0 rgba(255,42,109,0.4); }
+ .card h3 {
+ font-size: 1.2rem;
+ text-transform: uppercase;
+ letter-spacing: 0.06em;
+ color: var(--accent3);
+ margin-bottom: 1rem;
+ border-left: 4px solid var(--accent);
+ padding-left: 0.8rem;
+ }
+ .card p { font-size: 0.95rem; color: #bbb; line-height: 1.7; }
+ .card .highlight { color: var(--accent2); font-weight: 600; }
+
+ /* DETAIL SECTION */
+ .detail-section {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 2rem;
+ padding: 3rem 0;
+ border-top: 1px solid #222;
+ border-bottom: 1px solid #222;
+ }
+ .detail-left { flex: 1 1 40%; }
+ .detail-right { flex: 1 1 55%; }
+ .detail-left h2 {
+ font-size: 2.2rem;
+ font-weight: 800;
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ color: var(--fg);
+ }
+ .detail-left h2 span { color: var(--accent); }
+ .detail-right .meta {
+ font-family: var(--font-mono);
+ font-size: 0.85rem;
+ color: var(--accent3);
+ margin-bottom: 0.5rem;
+ background: #1a1a1a;
+ padding: 0.3rem 0.8rem;
+ display: inline-block;
+ }
+ .detail-right p { margin-bottom: 1.5rem; color: #ccc; }
+ .detail-right strong { color: var(--accent); }
+ .detail-right .btn {
+ display: inline-block;
+ background: transparent;
+ border: 2px solid var(--accent);
+ color: var(--accent);
+ padding: 0.7rem 2rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ transition: 0.2s;
+ cursor: pointer;
+ }
+ .detail-right .btn:hover { background: var(--accent); color: #000; }
+
+ /* FAQ */
+ .faq {
+ padding: 3rem 0;
+ }
+ .faq h2 {
+ font-size: 2rem;
+ font-weight: 800;
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ margin-bottom: 2rem;
+ position: relative;
+ }
+ .faq h2::after {
+ content: '';
+ display: block;
+ width: 60px;
+ height: 4px;
+ background: var(--accent);
+ margin-top: 0.5rem;
+ }
+ .faq-item {
+ border-bottom: 1px solid #222;
+ padding: 1.2rem 0;
+ }
+ .faq-question {
+ font-weight: 700;
+ font-size: 1.05rem;
+ cursor: pointer;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ color: var(--fg);
+ }
+ .faq-question::after {
+ content: '+';
+ font-size: 1.5rem;
+ color: var(--accent);
+ transition: 0.2s;
+ }
+ .faq-answer {
+ max-height: 0;
+ overflow: hidden;
+ transition: max-height 0.3s ease;
+ padding-top: 0.5rem;
+ color: #aaa;
+ }
+ .faq-item.open .faq-answer { max-height: 200px; }
+ .faq-item.open .faq-question::after { content: '−'; }
+
+ /* FOOTER */
+ .footer {
+ margin-top: auto;
+ padding: 2rem;
+ border-top: var(--border-w) solid var(--accent);
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ gap: 1rem;
+ font-size: 0.85rem;
+ color: #666;
+ }
+ .footer strong { color: var(--accent2); }
+
+ /* UTILITY */
+ .text-accent { color: var(--accent); }
+ .text-accent2 { color: var(--accent2); }
+ .mono { font-family: var(--font-mono); }
+ .mb-2 { margin-bottom: 2rem; }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · sf-t3-1779642675702-446">
+  <meta property="og:description" content="sf-t3-1779642675702-446에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-446.maphoshirts.today/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+ <div class="logo"><span>✦</span> 화곡<span>셔츠룸</span></div>
+ <div class="hamburger-menu" onclick="toggleNav()">
+ 
+ </div>
+ <nav class="nav" id="mainNav">
+ <a href="/">홈</a>
+ <a href="/info" class="active">정보</a>
+ <a href="/guide">이용안내</a>
+ <a href="/gallery">갤러리</a>
+ <a href="/contact">연락처</a>
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 33개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0483.html">화곡 셔츠룸 예약과 구글 신뢰 지수 모발이식 솔루션의 도메인 파워 관계</a>
+        <p class="post-item__summary">웹사이트의 권위를 결정짓는 요소 중 하나는 전문성과 신뢰도, 그리고 사용자 경험이라는 세 가지 조건입니다. 화곡 셔츠룸과 같은 지역 기반 정보를 찾을 때도 검색 엔진은 얼마나 공신력 있는 데이터를 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0155.html">화곡 셔츠룸 마니아를 위한 공덕 셔츠룸 추천정보 가이드</a>
+        <p class="post-item__summary">시설의 쾌적함, 합리적인 비용, 그리고 원활한 서비스 응대라는 세 가지 충족 조건이 하나로 모여야 성공적인 유흥을 즐길 수 있습니다. 특히 화곡 셔츠룸 경험을 통해 높은 기대치를 가진 분들이라면 공</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0156.html">화곡 셔츠룸 고객이 묻는 연남 유흥 추천정보 비교 기준</a>
+        <p class="post-item__summary">여러분은 유흥 장소를 선택할 때 가장 먼저 무엇을 확인하시나요. 화곡 셔츠룸 등을 이용해보며 느꼈던 장점들을 연남동이라는 새로운 환경에서도 그대로 기대해도 괜찮을까요. 사실 각 지역마다 형성된 유흥</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0157.html">화곡 셔츠룸 방문 시 꼼꼼히 따져보는 마곡 가라오케 추천정보 활용법</a>
+        <p class="post-item__summary">화곡 셔츠룸 이용을 고려하다 보면 자연스럽게 마곡 지역의 유흥 환경에 관심을 갖게 됩니다. 하지만 넘쳐나는 광고성 글 사이에서 진짜 정보를 골라내는 작업은 쉽지 않습니다. 신뢰할 수 있는 업체를 찾</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0158.html">화곡 셔츠룸 대안으로 비교해보는 마곡 유흥 추천정보 가격 기준</a>
+        <p class="post-item__summary">화곡 셔츠룸 스타일의 운영 방식과 정통적인 유흥 업소 형태는 가격 산정 방식에서 뚜렷한 차이를 보입니다. 소비자 입장에서는 자신의 예산 규모에 맞춰 효율적인 선택을 내리는 것이 가장 중요합니다. 크</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0159.html">화곡 셔츠룸 예약보다 까다로운 합정 노래방 추천정보 확보 전략</a>
+        <p class="post-item__summary">화곡 셔츠룸과 같은 익숙한 환경에서 벗어나 새로운 곳을 찾다 보면 예약 과정에서 막히는 경우가 많습니다. 합정 지역의 많은 명소가 인기를 끌면서 당일 방문이 어려운 상황이 빈번하게 발생합니다. 특히</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0160.html">화곡 셔츠룸 방문객을 위한 연남 클럽 추천정보 접근성 체크리스트</a>
+        <p class="post-item__summary">화곡 셔츠룸에서 즐거운 시간을 보낸 후 연남 지역으로 이동하려는 분들이 늘어나고 있습니다. 하지만 클럽이라는 공간 특성상 위치와 접근성은 방문 성공 여부를 결정짓는 아주 중요한 요소입니다. 효율적인</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0161.html">화곡 셔츠룸 방문객을 위한 합정 셔츠룸 추천정보 및 가이드</a>
+        <p class="post-item__summary">지인들과 함께 갑작스럽게 저녁 모임을 계획하다 보면 화곡 셔츠룸 같은 장소를 찾게 되곤 합니다. 하지만 처음 방문하는 경우에는 시스템이나 이용 방식이 다소 낯설게 느껴질 수 있어 당황하는 일이 발생</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0162.html">화곡 셔츠룸 찾는 분들이 궁금해하는 공덕 가라오케 추천정보</a>
+        <p class="post-item__summary">많은 이들이 화곡 셔츠룸과 공덕 일대의 유흥 시설이 완전히 동일한 문화를 공유한다고 오해하곤 합니다. 하지만 각 지역마다 가라오케가 가진 고유의 분위기와 고객 접대 방식에는 분명한 차이가 존재합니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0163.html">화곡 셔츠룸 마니아들을 위한 상수 마사지 추천정보와 팁</a>
+        <p class="post-item__summary">화곡 셔츠룸을 즐겨 찾는 분들은 대체로 피로를 풀거나 휴식을 취하는 일련의 루틴을 가지고 있습니다. 이런 분들에게 중요한 것은 시설의 청결도, 관리사의 숙련도, 그리고 합리적인 가격이라는 세 가지 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0164.html">화곡 셔츠룸 이용객이 망원 노래방 추천정보를 찾게 되는 이유</a>
+        <p class="post-item__summary">혹시 화곡 셔츠룸 같은 화려한 유흥 환경을 경험한 뒤, 친구들과 소소하게 노래를 부르며 뒷풀이를 할 장소를 찾고 계신가요? 많은 사람이 화려한 밤의 마무리를 어디서 할지 고민하며 망원동 일대의 노래</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0165.html">화곡 셔츠룸 이용객이 알아두면 좋은 홍대 노래방 추천정보 분석</a>
+        <p class="post-item__summary">화곡 셔츠룸 경험을 가진 이용자들이 홍대 일대에서 노래방을 선택할 때 가장 먼저 고려해야 할 점은 후기의 객관성입니다. 단순히 방문자 수가 많거나 상단에 노출되는 업체라고 해서 무조건적으로 신뢰하기</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-r7cig.html">화곡 셔츠룸에 관한 흔한 오해, 직접 확인해보니 달랐던 점</a>
+        <p class="post-item__summary">최근 유흥 문화에 대한 관심이 높아지면서 화곡 셔츠룸이라는 키워드를 접하는 경우가 많아졌습니다. 많은 사람이 이 공간을 단순히 특정 방식의 유흥이 이루어지는 곳으로만 단정 짓고는 합니다. 하지만 실</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
